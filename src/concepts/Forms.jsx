@@ -2,25 +2,23 @@ import { useState } from 'react'
 import '../style/Forms.css'
 
 function Forms() {
-
-  // Demo 1 — Controlled Input
   const [name, setName] = useState('')
-
-  // Demo 2 — Full Form
   const [form, setForm] = useState({ email: '', password: '' })
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
 
-  function handleChange(e) {
-    setForm({ ...form, [e.target.name]: e.target.value })
+  function handleChange(event) {
+    setForm({ ...form, [event.target.name]: event.target.value })
   }
 
-  function handleSubmit(e) {
-    e.preventDefault()
+  function handleSubmit(event) {
+    event.preventDefault()
+
     if (!form.email || !form.password) {
-      setError('Sare fields bharo!')
+      setError('Please fill in all fields.')
       return
     }
+
     setError('')
     setSubmitted(true)
   }
@@ -29,17 +27,16 @@ function Forms() {
     <div id="forms" className="concept-section">
       <h2>📝 Forms & Events</h2>
       <p className="concept-desc">
-        User input ko state mein pakdo — events handle karo
+        Capture user input with state and respond to form events.
       </p>
 
-      {/* Demo 1 — Controlled Input */}
       <div className="demo-box">
-        <p className="demo-title">Demo 1 — Controlled Input</p>
+        <p className="demo-title">Demo 1 — Controlled input</p>
         <input
           type="text"
-          placeholder="Apna naam likho..."
+          placeholder="Type your name..."
           value={name}
-          onChange={e => setName(e.target.value)}
+          onChange={(event) => setName(event.target.value)}
           className="form-input"
         />
         {name && (
@@ -49,16 +46,19 @@ function Forms() {
         )}
       </div>
 
-      {/* Demo 2 — Login Form */}
       <div className="demo-box">
-        <p className="demo-title">Demo 2 — Login Form</p>
+        <p className="demo-title">Demo 2 — Login form</p>
         {submitted ? (
           <div className="success-box">
             ✅ Login successful! <br />
             <span>{form.email}</span>
             <button
+              type="button"
               className="reset-form-btn"
-              onClick={() => { setSubmitted(false); setForm({ email: '', password: '' }) }}
+              onClick={() => {
+                setSubmitted(false)
+                setForm({ email: '', password: '' })
+              }}
             >
               Reset
             </button>
@@ -88,7 +88,6 @@ function Forms() {
           </form>
         )}
       </div>
-
     </div>
   )
 }
