@@ -3,31 +3,31 @@ import '../style/page.css'
 function About() {
   return (
     <div className="page">
-      <h1>🗺️ React Router kya hai?</h1>
+      <h1>React Router</h1>
 
       <div className="info-card">
-        <h3>Problem</h3>
+        <h3>What it solves</h3>
         <p>
-          React mein sirf ek page hota hai — index.html.
-          Alag URLs pe alag content dikhana mushkil tha.
+          A React app can render multiple views without refreshing the page. React Router
+          maps a URL to the component that should be displayed.
         </p>
       </div>
 
       <div className="info-card">
-        <h3>Solution</h3>
+        <h3>Core idea</h3>
         <p>
-          React Router URL dekhta hai aur sahi component
-          dikha deta hai — bina page reload ke!
+          The browser URL is used as the source of truth. Based on the route, React
+          renders the matching component and updates the interface in place.
         </p>
       </div>
 
       <div className="info-card">
-        <h3>4 Main Cheezein</h3>
+        <h3>Main building blocks</h3>
         <ul>
-          <li><strong>BrowserRouter</strong> — Router on karo</li>
-          <li><strong>Routes</strong> — Sare routes ka container</li>
-          <li><strong>Route</strong> — URL se component match karo</li>
-          <li><strong>Link</strong> — Page reload ke bina navigate karo</li>
+          <li><strong>BrowserRouter</strong> — enables routing in the app</li>
+          <li><strong>Routes</strong> — holds all route definitions</li>
+          <li><strong>Route</strong> — matches a URL pattern to a component</li>
+          <li><strong>Link</strong> — allows in-app navigation without a page reload</li>
         </ul>
       </div>
 
@@ -39,48 +39,4 @@ function About() {
   )
 }
 
-export default About;
-
-// import '../style/page.css'
-
-// function About(){
-//     return(
-//         <div className="page">
-//             <h1>About router</h1>
-
-//             <div className="info">
-//                 <p>
-//                     React has only one page, but router allows us to create multiple
-//                     views within a single page.
-//                 </p>
-//             </div>
-
-//             <div className="info">
-//                 <p>
-//                     React Router is a library that helps you handle routing in a React
-//                     application, allowing you to create single-page applications with
-//                     navigation without refreshing the page.
-//                 </p>
-//             </div>
-
-//             <div className="info">
-//                 <h3>4 Main components</h3>
-//                 <ul>
-//                     <li>
-//                         <strong>BrowserRouter</strong>
-//                     </li>
-//                     <li>
-//                         <strong>Route</strong>
-//                     </li>
-//                     <li>
-//                         <strong>Switch</strong>
-//                     </li>
-//                     <li>
-//                         <strong>Link</strong>
-//                     </li>
-//                 </ul>
-//             </div>
-//         </div>
-//     )
-// }
-// export default About;
+export default About

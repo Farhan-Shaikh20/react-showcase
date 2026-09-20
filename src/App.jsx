@@ -3,26 +3,23 @@ import Sidebar from './components/Sidebar.jsx'
 import Props from './concepts/Props.jsx'
 import UseStates from './concepts/UseStates.jsx'
 import UseEffects from './concepts/UseEffects.jsx'
+import ConditionalDemo from './concepts/ConditionalDemo.jsx'
+import Forms from './concepts/Forms.jsx'
 import About from './pages/About.jsx'
 import Cheatsheet from './pages/Cheatsheet.jsx'
-import ConditionalDemo from './concepts/ConditionalDemo.jsx'
-import Forms from './concepts/Forms'
 
-
-// Home page — sare concepts ek saath
 function Home() {
   return (
     <div>
-      <h1>React Playground 🚀</h1>
+      <h1>React Playground</h1>
       <p style={{ marginBottom: '40px', color: '#777' }}>
-        live demo of each concept ↓
+        Live demos of the core React concepts covered in this project.
       </p>
       <Props />
       <UseStates />
       <UseEffects />
       <ConditionalDemo />
       <Forms />
-
     </div>
   )
 }
